@@ -1,0 +1,303 @@
+@import "pattern"
+@import "fonts"
+
+/* Top Menu */
+
+.b-info-search
+  height: 55px
+  background-color: #333335
+  border: none
+
+.b-main-menu
+  height: 120px
+  min-width: 415px
+  @media (max-width: 1200px)
+    height: 90px
+  @media (max-width: 767px)
+    height: 70px
+
+.b-main-menu__row
+  height: inherit
+
+.b-main-menu__container
+  border-radius: 0
+  background-color: #1c1c1e
+  height: inherit
+  border: none
+
+.navbar-header
+  @media (max-width: 767px)
+    height: 70px
+  .navbar-toggle
+    padding-left: 22px
+    @media (max-width: 767px)
+      display: block
+      width: 80px
+      height: inherit
+      margin: 0
+      border: 0
+      border-right: 1px solid #393939
+      border-radius: 0
+
+.navbar-toggle
+  .button-row
+    display: block
+    width: 35px
+    height: 7px
+    border-radius: 1px
+    margin-bottom: 4px
+    background: #ededed
+
+#menu-collapse
+  height: inherit !important
+  @media (max-width: 767px)
+    height: auto !important
+    background: #333335
+
+.b-menu
+  height: inherit
+  float: none
+  background-color: #1c1c1e
+  padding:
+    left: 90px
+    right: 90px
+  display: flex
+  align-items: center
+  padding-top: 5px
+  @media (max-width: 1550px)
+    padding:
+      left: 40px
+      right: 40px
+  @media (max-width: 1300px)
+    padding:
+      left: 0
+      right: 0
+  @media (max-width: 767px)
+    margin-top: 0
+    display: block
+    padding-top: 20px
+    background: #333335
+  .b-menu__list
+    letter-spacing: 1px
+    @media (max-width: 767px)
+      width: 100% !important
+      text-align: left !important
+      padding-left: 15px
+    &:nth-child(1)
+      width: 7.4%
+      padding-left: 15px
+      @media (max-width: 1200px)
+        width: 8.4%
+    &:nth-child(2)
+      width: 11%
+      @media (max-width: 1200px)
+        width: 8%
+    &:nth-child(3)
+      width: 10.5%
+      @media (max-width: 1200px)
+        width: 11.5%
+    &:nth-child(4)
+      width: 15.5%
+      @media (max-width: 1200px)
+        width: 13.5%
+    &:nth-child(5)
+      width: 11%
+      &:hover .list-link
+        border: none
+      .list-link
+        outline: none
+    &:nth-child(6)
+      width: 12%
+      @media (max-width: 1200px)
+        width: 13%
+    &:nth-child(7)
+      width: 12.5%
+    &:nth-child(8)
+      width: 13.2%
+    &:nth-child(9)
+      width: 7%
+      text-align: end !important
+      padding-right: 15px
+      @media (max-width: 767px)
+        text-align: left !important
+    &:nth-child(n+2)
+      text-align: center
+
+.list-link
+  background: none !important
+  display: inline !important
+  padding-right: 0 !important
+  padding-left: 0 !important
+  padding-bottom: 10px !important
+  text-transform: uppercase
+  @include fonts($fontFamily, 20px, inherit, $Hairline, #fffefe)
+  @media (max-width: 1200px)
+    @include fonts($fontFamily, 18px, inherit, $Hairline, #fffefe)
+  @media (max-width: 920px)
+    @include fonts($fontFamily, 14px, inherit, $Hairline, #fffefe)
+  @media (max-width: 767px)
+    color: #fffefe
+    text-transform: none
+    &:hover
+      @include fonts($fontFamily, 14px, inherit, $SemiBold, #fb3c3c)
+      text-decoration: none
+      transition: 0s
+      outline: none
+      background: none !important
+  &:hover
+    @include fonts($fontFamily, 20px, inherit, $SemiBold, #fb3c3c)
+    text-decoration: none
+    border-bottom: 2px solid #fff
+    transition: 0s
+    outline: none
+    @media (max-width: 1200px)
+      @include fonts($fontFamily, 18px, inherit, $SemiBold, #fb3c3c)
+    @media (max-width: 920px)
+      @include fonts($fontFamily, 14px, inherit, $SemiBold, #fb3c3c)
+    @media (max-width: 767px)
+      border: none
+      @include fonts($fontFamily, 14px, inherit, $Hairline, #fb3c3c)
+
+.list__pictures
+  .pictures
+    @media (max-width: 1200px)
+      width: 63px !important
+    @media (max-width: 767px)
+      display: none
+
+.b-menu-dropdown
+  background-color: #333335
+  margin-top: 42px !important
+  text-align: center
+  left: 14px
+  @media (max-width: 1500px)
+    min-width: 135px
+    left: 0
+  @media (max-width: 1200px)
+    margin-top: 29px !important
+    min-width: 80px
+  @media (max-width: 767px)
+    margin-top: 0 !important
+  .b-list-dropdown
+    float: none
+    .b-list-dropdown__link
+      @include fonts($fontFamily, 14px, inherit, $Hairline, #fffefe)
+      &:hover
+        @include fonts($fontFamily, 14px, inherit, $SemiBold, #fb3c3c)
+        text-decoration: none
+        transition: 0s
+        outline: none
+        background: none !important
+        @media (max-width: 1500px)
+          font-size: 12px !important
+      @media (max-width: 1500px)
+        font-size: 13px !important
+      @media (max-width: 767px)
+        text-align: left
+        font-size: 14px !important
+        &:hover
+          @include fonts($fontFamily, 14px, inherit, $Hairline, #fb3c3c)
+
+.form-body
+  @media (max-width: 1550px)
+    padding-left: 15px
+
+.form-body__icone
+  color: #ededed
+  font-size: 20px
+  @media (max-width: 767px)
+    position: absolute
+    right: 100px
+    top: 25px
+
+.img-logo-hidden
+  display: none
+  @media (max-width: 767px)
+    display: block
+    width: inherit
+    margin: 0 auto
+    margin-top: 14px
+
+.b-info-search__form
+  padding-left: 105px
+  padding-top: 5px
+  @media (max-width: 1550px)
+    padding:
+      left: 40px
+      right: 40px
+  @media (max-width: 1300px)
+    padding:
+      left: 0
+      right: 0
+
+.search-input
+  background: none
+  border: none
+  box-shadow: none
+  padding-right: 6px !important
+  letter-spacing: 1px
+  @include fonts($fontFamily, 14px, inherit, $Hairline, #ededed)
+  &:focus
+    outline: none
+    border-bottom: 1px solid #fff
+    box-shadow: none
+    border-radius: 0
+
+.b-info-side
+  padding-right: 105px
+  padding-top: 12px
+  @media (max-width: 1550px)
+    padding-right: 55px
+  @media (max-width: 1300px)
+    padding-right: 15px
+  @media (max-width: 767px)
+    width: 89px
+    height: inherit
+    padding: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    border-left: 1px solid #393939
+
+.b-info-side_list
+  float: left
+
+.language
+  padding-top: 5px
+  padding-right: 57px
+  text-align: center
+  @include fonts($fontFamily, 14px, inherit, $Hairline, #ededed)
+  @media (max-width: 767px)
+    display: none
+  a
+    text-transform: uppercase
+    display: inline-block
+    width: 33px
+    @include fonts($fontFamily, 14px, inherit, $Hairline, #ededed)
+    &:hover
+      text-decoration: none
+      @include fonts($fontFamily, 14px, inherit, $ExtraBold, #ededed)
+      transition: .3s
+
+.login-reg
+  @include fonts($fontFamily, 14px, inherit, $Hairline, #ededed)
+  padding-right: 52px
+  letter-spacing: 1px
+  padding-top: 6px
+  @media (max-width: 767px)
+    display: none
+  a
+    @include fonts($fontFamily, 14px, inherit, $Hairline, #ededed)
+    text-transform: uppercase
+    &:hover
+      text-decoration: none
+      color: #fb3c3c !important
+      transition: .3s
+
+.shopping-cart
+  @include fonts($fontFamily, 20px, inherit, $Light, #fff)
+  span
+    font-size: 25px
+    color: #ededed
+    top: 3px
+    padding-right: 6px

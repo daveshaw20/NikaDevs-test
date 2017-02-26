@@ -1,0 +1,56 @@
+// rid
+
+.b-wrapper
+  padding: 0 0 0 0
+  min-width: 320px
+  width: 100%
+  position: relative
+  overflow: hidden
+  min-height: 100%
+
+//.b-container
+//  width: 1200px
+//  box-sizing: border-box
+//  margin: 0 auto
+//  position: relative
+//  padding-left: 20px
+//  padding-right: 20px
+//  @media screen and (min-width: 1000px) and (max-width: 1199px)
+//    width: 1000px
+//  @media screen and (min-width: 600px) and (max-width: 999px)
+//    width: 600px
+//  @media screen and (max-width: 599px)
+//    width: 320px
+
+// variables
+
+$ExtraBold: 800
+$SemiBold: 600
+$Light: 300
+$Hairline: 200
+$fontFamily: 'Mons', sans-serif
+
+// mixins
+
+@mixin clearFloat
+  display: inline-block
+  &:after
+    content: " "
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+  * html &
+    height: 1px
+
+@mixin fonts($fontFamily, $font-s, $font-h, $font-w, $font-c)
+  font-family: $fontFamily !important
+  font-size: $font-s !important
+  line-height: $font-h !important
+  font-weight: $font-w !important
+  color: $font-c !important
+
+@mixin hover($hover-b)
+  background: $hover-b
+  transition: .3s
+
